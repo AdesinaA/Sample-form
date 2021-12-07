@@ -1,0 +1,14 @@
+<hr>
+<%= form_for @customer do |f| -%>
+    firstname:<%= f.text_field: firstname%><br />
+    lastname:<%= f.text_field: lastname%><br />
+    <%= f.submit%>
+<%end -%>
+<hr>
+<% if !@customers.blank? %>
+  <% for item in @customers %>
+    <% = item.firstname%> <%= item.lastname%> <br />
+  <% end %>
+<% else %>
+
+<% end %>
